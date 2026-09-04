@@ -1,0 +1,965 @@
+/* =========================================================
+   DOCTOR PROFILE PAGE
+========================================================= */
+
+.dprofile-page {
+  --dprofile-primary: #0f766e;
+  --dprofile-primary-dark: #115e59;
+  --dprofile-primary-light: #ecfdf5;
+
+  --dprofile-text: #172033;
+  --dprofile-muted: #64748b;
+
+  --dprofile-border: #e2e8f0;
+  --dprofile-background: #f8fafc;
+  --dprofile-white: #ffffff;
+
+  min-height: 100vh;
+
+  background: var(--dprofile-background);
+  color: var(--dprofile-text);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.dprofile-hero {
+  position: relative;
+
+  min-height: 280px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 47, 46, 0.95),
+      rgba(15, 118, 110, 0.82),
+      rgba(15, 118, 110, 0.45)
+    ),
+    url("/reception.png") center / cover no-repeat;
+
+  color: #ffffff;
+}
+
+
+.dprofile-hero-inner {
+  width: min(1200px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 60px 0;
+}
+
+
+.dprofile-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin: 0 0 16px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.dprofile-breadcrumb span {
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 18px;
+}
+
+
+.dprofile-hero-inner h1 {
+  margin: 0 0 12px;
+
+  font-size: clamp(24px, 4vw, 52px) !important;;
+  overflow: hidden;
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+
+.dprofile-hero-description {
+  max-width: 550px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.dprofile-container {
+  width: min(1100px, calc(100% - 40px));
+
+  margin: -50px auto 60px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   MAIN DOCTOR CARD
+========================================================= */
+
+.dprofile-main-card {
+  display: grid;
+
+  grid-template-columns: 320px 1fr;
+
+  gap: 42px;
+
+  padding: 36px;
+
+  background: var(--dprofile-white);
+
+  border: 1px solid var(--dprofile-border);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   DOCTOR IMAGE
+========================================================= */
+
+.dprofile-image-wrapper {
+  width: 100%;
+
+  height: 390px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #e2e8f0;
+}
+
+
+.dprofile-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+
+.dprofile-image-wrapper:hover .dprofile-image {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   DOCTOR INFORMATION
+========================================================= */
+
+.dprofile-info {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.dprofile-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  margin-bottom: 14px;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background: var(--dprofile-primary-light);
+
+  color: var(--dprofile-primary-dark);
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.dprofile-status-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+
+.dprofile-active {
+  background: #16a34a;
+}
+
+
+.dprofile-inactive {
+  background: #dc2626;
+}
+
+
+.dprofile-name {
+  margin: 0;
+
+  font-size: clamp(28px, 4vw, 40px);
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  color: var(--dprofile-text);
+}
+
+
+.dprofile-designation {
+  margin: 8px 0 4px;
+
+  color: var(--dprofile-primary);
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+.dprofile-specialization {
+  margin: 0 0 25px;
+
+  color: var(--dprofile-muted);
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   PROFILE DETAILS
+========================================================= */
+
+.dprofile-details {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+
+.dprofile-detail-item {
+  padding: 14px;
+
+  background: #fafafa;
+
+  border: 1px solid var(--dprofile-border);
+
+  border-radius: 10px;
+}
+
+
+.dprofile-detail-item span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--dprofile-muted);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+
+.dprofile-detail-item strong {
+  display: block;
+
+  color: var(--dprofile-text);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.dprofile-primary-btn {
+  width: fit-content;
+
+  padding: 13px 25px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: var(--dprofile-primary);
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.dprofile-primary-btn:hover {
+  background: var(--dprofile-primary-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(15, 118, 110, 0.22);
+}
+
+
+.dprofile-primary-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.dprofile-section {
+  margin-top: 25px;
+
+  padding: 32px;
+
+  background: var(--dprofile-white);
+
+  border: 1px solid var(--dprofile-border);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+
+.dprofile-section-title {
+  position: relative;
+
+  margin: 0 0 18px;
+
+  padding-left: 14px;
+
+  color: var(--dprofile-text);
+
+  font-size: 23px;
+
+  font-weight: 800;
+}
+
+
+.dprofile-section-title::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 3px;
+
+  width: 4px;
+  height: 24px;
+
+  border-radius: 5px;
+
+  background: var(--dprofile-primary);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.dprofile-about-text {
+  margin: 0;
+
+  color: var(--dprofile-muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   PROFESSIONAL INFORMATION
+========================================================= */
+
+.dprofile-professional-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+
+.dprofile-professional-item {
+  padding: 18px;
+
+  background: #fafafa;
+
+  border: 1px solid var(--dprofile-border);
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.dprofile-professional-item:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(15, 118, 110, 0.35);
+}
+
+
+.dprofile-professional-item span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--dprofile-muted);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+
+.dprofile-professional-item strong {
+  display: block;
+
+  color: var(--dprofile-text);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SCHEDULE
+========================================================= */
+
+.dprofile-schedule-heading {
+  margin-bottom: 20px;
+}
+
+
+.dprofile-schedule-heading .dprofile-section-title {
+  margin-bottom: 7px;
+}
+
+
+.dprofile-schedule-heading p {
+  margin: 0;
+
+  color: var(--dprofile-muted);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SCHEDULE TABLE
+========================================================= */
+
+.dprofile-schedule-table {
+  overflow: hidden;
+
+  border: 1px solid var(--dprofile-border);
+
+  border-radius: 12px;
+}
+
+
+.dprofile-schedule-header,
+.dprofile-schedule-row {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1fr;
+
+  align-items: center;
+}
+
+
+.dprofile-schedule-header {
+  padding: 14px 18px;
+
+  background: var(--dprofile-primary);
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.dprofile-schedule-row {
+  padding: 16px 18px;
+
+  border-top: 1px solid var(--dprofile-border);
+
+  color: var(--dprofile-muted);
+
+  font-size: 14px;
+
+  background: #ffffff;
+}
+
+
+.dprofile-schedule-row strong {
+  color: var(--dprofile-text);
+}
+
+
+.dprofile-schedule-row:hover {
+  background: #f8fafc;
+}
+
+
+.dprofile-no-schedule {
+  padding: 25px;
+
+  text-align: center;
+
+  color: var(--dprofile-muted);
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   APPOINTMENT CTA
+========================================================= */
+
+.dprofile-appointment {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-top: 25px;
+
+  padding: 30px 32px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--dprofile-primary-dark),
+      var(--dprofile-primary)
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 30px rgba(15, 118, 110, 0.18);
+}
+
+
+.dprofile-appointment-content h2 {
+  margin: 0 0 6px;
+
+  font-size: 23px;
+
+  font-weight: 800;
+}
+
+
+.dprofile-appointment-content p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 14px;
+}
+
+
+.dprofile-appointment-btn {
+  flex-shrink: 0;
+
+  padding: 13px 24px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: var(--dprofile-primary-dark);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.dprofile-appointment-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   NOT FOUND
+========================================================= */
+
+.dprofile-not-found {
+  min-height: 60vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  text-align: center;
+}
+
+
+.dprofile-not-found h2 {
+  margin: 0 0 8px;
+
+  font-size: 28px;
+}
+
+
+.dprofile-not-found p {
+  margin: 0 0 20px;
+
+  color: var(--dprofile-muted);
+}
+
+
+.dprofile-back-btn {
+  padding: 11px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: var(--dprofile-primary);
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .dprofile-main-card {
+    grid-template-columns: 260px 1fr;
+
+    gap: 28px;
+
+    padding: 28px;
+  }
+
+
+  .dprofile-image-wrapper {
+    height: 350px;
+  }
+
+
+  .dprofile-professional-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .dprofile-hero {
+    min-height: 240px;
+  }
+
+
+  .dprofile-hero-inner {
+    width: calc(100% - 30px);
+
+    padding: 45px 0;
+  }
+
+
+  .dprofile-hero-inner h1 {
+    font-size: 35px;
+  }
+
+
+  .dprofile-hero-description {
+    font-size: 14px;
+  }
+
+
+  .dprofile-container {
+    width: calc(100% - 30px);
+
+    margin-top: -30px;
+
+    margin-bottom: 40px;
+  }
+
+
+  .dprofile-main-card {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+  }
+
+
+  .dprofile-image-wrapper {
+    height: 330px;
+  }
+
+
+  .dprofile-name {
+    font-size: 29px;
+  }
+
+
+  .dprofile-designation {
+    font-size: 15px;
+  }
+
+
+  .dprofile-specialization {
+    font-size: 14px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .dprofile-details {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .dprofile-primary-btn {
+    width: 100%;
+  }
+
+
+  .dprofile-section {
+    margin-top: 20px;
+
+    padding: 22px 18px;
+
+    border-radius: 14px;
+  }
+
+
+  .dprofile-section-title {
+    font-size: 21px;
+  }
+
+
+  .dprofile-professional-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .dprofile-professional-item {
+    padding: 15px;
+  }
+
+
+  .dprofile-appointment {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    text-align: center;
+
+    padding: 25px 20px;
+  }
+
+
+  .dprofile-appointment-btn {
+    width: 100%;
+  }
+  .dprofile-schedule-header {
+    padding: 10px 8px; 
+    font-size: 11px;   
+  }
+
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .dprofile-hero-inner {
+    width: calc(100% - 24px);
+
+    padding: 40px 0;
+  }
+
+
+  .dprofile-breadcrumb {
+    font-size: 11px;
+  }
+
+
+  .dprofile-hero-inner h1 {
+    font-size: 30px;
+  }
+
+
+  .dprofile-container {
+    width: calc(100% - 20px);
+  }
+
+
+  .dprofile-main-card {
+    padding: 15px;
+  }
+
+
+  .dprofile-image-wrapper {
+    height: 280px;
+  }
+
+
+  .dprofile-name {
+    font-size: 26px;
+  }
+
+
+  .dprofile-section {
+    padding: 20px 15px;
+  }
+
+
+  .dprofile-section-title {
+    font-size: 20px;
+  }
+
+
+  /*
+    Small screen-এ schedule-এর column
+    ভেঙে না যাওয়ার জন্য minimum width
+  */
+
+  .dprofile-schedule-table {
+    overflow-x: auto;
+  }
+
+
+  .dprofile-schedule-header,
+  .dprofile-schedule-row {
+    min-width: 320px;
+  }
+
+
+  .dprofile-appointment-content h2 {
+    font-size: 20px;
+  }
+   
+
+}

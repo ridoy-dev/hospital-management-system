@@ -1,0 +1,871 @@
+/* =========================================================
+   DOCTORS PAGE
+========================================================= */
+
+.ridoy-doctors-page {
+  min-height: 100vh;
+  padding: 35px;
+  margin-left:120px ;
+  background: #f5f7fb;
+   border-top-left-radius:40px ;
+  border-bottom-left-radius:40px ;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ridoy-doctors-header {
+  max-width: 1250px;
+  margin: 0 auto 30px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ridoy-doctors-badge {
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: 6px 12px;
+
+  border-radius: 6px;
+
+  background: #eaf3ff;
+  color: #1769aa;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.ridoy-doctors-header h1 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.ridoy-doctors-header p {
+  margin: 8px 0 0;
+
+  color: #7e899c;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   COUNT
+========================================================= */
+
+.ridoy-doctors-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 145px;
+  padding: 14px 20px;
+
+  border: 1px solid #e2e7ef;
+  border-radius: 12px;
+
+  background: #fff;
+}
+
+.ridoy-doctors-count strong {
+  color: #1769aa;
+  font-size: 24px;
+}
+
+.ridoy-doctors-count span {
+  color: #8993a5;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   DOCTOR GRID
+========================================================= */
+
+.ridoy-doctors-grid {
+  max-width: 1250px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+
+/* =========================================================
+   DOCTOR CARD
+========================================================= */
+
+.ridoy-doctor-card {
+  overflow: hidden;
+
+  border: 1px solid #e5e9f0;
+  border-radius: 16px;
+
+  background: #fff;
+
+  box-shadow: 0 6px 25px rgba(25, 50, 80, 0.05);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.ridoy-doctor-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 22px 22px 0;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.ridoy-doctor-image {
+  width: 82px;
+  height: 82px;
+
+  overflow: hidden;
+
+  border: 3px solid #eef4fb;
+  border-radius: 50%;
+
+  background: #f1f5f9;
+}
+
+.ridoy-doctor-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.ridoy-doctor-no-image {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #1769aa;
+  background: #eaf3ff;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.ridoy-doctor-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ridoy-doctor-status span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+}
+
+.ridoy-doctor-status-active {
+  color: #16834b;
+  background: #eaf8f0;
+}
+
+.ridoy-doctor-status-inactive {
+  color: #7c8594;
+  background: #f0f2f5;
+}
+
+
+/* =========================================================
+   MAIN INFO
+========================================================= */
+
+.ridoy-doctor-main-info {
+  padding: 17px 22px 15px;
+}
+
+.ridoy-doctor-main-info h2 {
+  margin: 0 0 5px;
+
+  color: #1d2738;
+
+  font-size: 20px;
+}
+
+.ridoy-doctor-designation {
+  margin: 0 0 8px;
+
+  color: #697487;
+
+  font-size: 12px;
+}
+
+.ridoy-doctor-specialization {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 5px;
+
+  background: #f0f6fc;
+  color: #1769aa;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.ridoy-doctor-details {
+  margin: 0 22px;
+
+  border-top: 1px solid #edf0f4;
+}
+
+.ridoy-doctor-detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.ridoy-doctor-detail-row span {
+  color: #929baa;
+  font-size: 11px;
+}
+
+.ridoy-doctor-detail-row strong {
+  max-width: 65%;
+
+  color: #3a4557;
+
+  font-size: 11px;
+  text-align: right;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   SCHEDULE
+========================================================= */
+
+.ridoy-doctor-schedule {
+  margin: 18px 22px 0;
+
+  padding: 13px;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+}
+
+.ridoy-doctor-schedule-title {
+  margin-bottom: 9px;
+
+  color: #3d485a;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ridoy-doctor-schedule-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 7px 0;
+
+  border-top: 1px solid #e9edf2;
+}
+
+.ridoy-doctor-schedule-item span {
+  color: #707b8e;
+  font-size: 10px;
+}
+
+.ridoy-doctor-schedule-item strong {
+  color: #3e495b;
+  font-size: 10px;
+}
+
+.ridoy-doctor-no-schedule {
+  margin: 0;
+
+  color: #9aa3b2;
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.ridoy-doctor-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  padding: 18px 22px 22px;
+}
+
+.ridoy-doctor-edit-btn,
+.ridoy-doctor-delete-btn {
+  height: 40px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ridoy-doctor-edit-btn {
+  border: 1px solid #cdddeb;
+
+  background: #f4f9fe;
+  color: #1769aa;
+}
+
+.ridoy-doctor-delete-btn {
+  border: 1px solid #f1cccc;
+
+  background: #fff7f7;
+  color: #d9534f;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.ridoy-doctors-empty {
+  grid-column: 1 / -1;
+
+  padding: 70px 20px;
+
+  text-align: center;
+
+  border: 1px dashed #d8dee8;
+  border-radius: 15px;
+
+  background: #fff;
+}
+
+.ridoy-doctors-empty div {
+  width: 55px;
+  height: 55px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #edf5ff;
+  color: #1769aa;
+
+  font-size: 28px;
+}
+
+.ridoy-doctors-empty h2 {
+  margin: 15px 0 5px;
+
+  color: #293447;
+  font-size: 19px;
+}
+
+.ridoy-doctors-empty p {
+  margin: 0;
+
+  color: #929aaa;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.ridoy-doctor-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(20, 29, 43, 0.55);
+}
+
+
+/* =========================================================
+   EDIT MODAL
+========================================================= */
+
+.ridoy-doctor-edit-modal {
+  width: 100%;
+  max-width: 850px;
+  max-height: 92vh;
+
+  overflow-y: auto;
+
+  border-radius: 16px;
+
+  background: #fff;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.ridoy-doctor-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px 26px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.ridoy-doctor-modal-header span {
+  color: #1769aa;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.ridoy-doctor-modal-header h2 {
+  margin: 4px 0 0;
+
+  color: #1d2738;
+  font-size: 21px;
+}
+
+.ridoy-doctor-modal-close {
+  width: 35px;
+  height: 35px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #f2f4f7;
+  color: #667184;
+
+  cursor: pointer;
+
+  font-size: 22px;
+}
+
+
+/* =========================================================
+   EDIT FORM
+========================================================= */
+
+.ridoy-doctor-edit-form {
+  padding: 25px 26px;
+}
+
+.ridoy-doctor-edit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+}
+
+.ridoy-doctor-edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.ridoy-doctor-edit-field label {
+  color: #4c5769;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ridoy-doctor-edit-field input,
+.ridoy-doctor-edit-field select {
+  width: 100%;
+  height: 43px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dfe4eb;
+  border-radius: 7px;
+
+  outline: none;
+
+  color: #303b4d;
+
+  font-size: 12px;
+}
+
+.ridoy-doctor-edit-field input:focus,
+.ridoy-doctor-edit-field select:focus {
+  border-color: #1769aa;
+}
+
+
+/* =========================================================
+   EDIT STATUS
+========================================================= */
+
+.ridoy-doctor-edit-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 22px;
+  padding: 15px;
+
+  border: 1px solid #e7ebf0;
+  border-radius: 9px;
+
+  background: #fafbfd;
+}
+
+.ridoy-doctor-edit-status strong {
+  display: block;
+
+  color: #3b4657;
+  font-size: 12px;
+}
+
+.ridoy-doctor-edit-status small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #929baa;
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   TOGGLE
+========================================================= */
+
+.ridoy-doctor-toggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 12px;
+
+  border: 0;
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ridoy-doctor-toggle span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+}
+
+.ridoy-doctor-toggle-active {
+  color: #16834b;
+  background: #eaf8f0;
+}
+
+.ridoy-doctor-toggle-inactive {
+  color: #7b8491;
+  background: #eef0f3;
+}
+
+
+/* =========================================================
+   EDIT SCHEDULE
+========================================================= */
+
+.ridoy-doctor-edit-schedule {
+  margin-top: 22px;
+}
+
+.ridoy-doctor-edit-schedule-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+.ridoy-doctor-edit-schedule-header h3 {
+  margin: 0;
+
+  color: #3a4557;
+  font-size: 13px;
+}
+
+.ridoy-doctor-edit-schedule-header p {
+  margin: 3px 0 0;
+
+  color: #949dac;
+  font-size: 10px;
+}
+
+.ridoy-doctor-add-schedule {
+  padding: 8px 12px;
+
+  border: 1px dashed #b9ccde;
+  border-radius: 6px;
+
+  background: #f5faff;
+  color: #1769aa;
+
+  cursor: pointer;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SCHEDULE ROW
+========================================================= */
+
+.ridoy-doctor-edit-schedule-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 9px;
+
+  margin-bottom: 9px;
+}
+
+.ridoy-doctor-edit-schedule-row input,
+.ridoy-doctor-edit-schedule-row select {
+  width: 100%;
+  height: 40px;
+
+  padding: 0 9px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dfe4eb;
+  border-radius: 6px;
+
+  outline: none;
+
+  font-size: 10px;
+}
+
+.ridoy-doctor-remove-schedule {
+  height: 40px;
+
+  padding: 0 11px;
+
+  border: 1px solid #f0caca;
+  border-radius: 6px;
+
+  background: #fff6f6;
+  color: #d9534f;
+
+  cursor: pointer;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   MODAL ACTIONS
+========================================================= */
+
+.ridoy-doctor-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 25px;
+  padding-top: 20px;
+
+  border-top: 1px solid #edf0f4;
+}
+
+.ridoy-doctor-modal-cancel,
+.ridoy-doctor-modal-save {
+  height: 42px;
+
+  padding: 0 20px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ridoy-doctor-modal-cancel {
+  border: 1px solid #dfe4eb;
+
+  background: #fff;
+  color: #677184;
+}
+
+.ridoy-doctor-modal-save {
+  border: 0;
+
+  background: #1769aa;
+  color: #fff;
+}
+
+.ridoy-doctor-modal-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .ridoy-doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .ridoy-doctors-page {
+     margin-left: 0; 
+    border-top-left-radius: 0;         
+    border-bottom-left-radius: 0;
+    padding: 20px 14px;
+  }
+
+  .ridoy-doctors-header {
+    text-align: center;
+    margin-top: 70px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ridoy-doctors-count {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ridoy-doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ridoy-doctor-edit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ridoy-doctor-edit-schedule-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ridoy-doctor-remove-schedule {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .ridoy-doctors-header h1 {
+    font-size: 26px;
+  }
+
+  .ridoy-doctor-card-top {
+    padding: 18px 16px 0;
+  }
+
+  .ridoy-doctor-main-info {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .ridoy-doctor-details {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .ridoy-doctor-schedule {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .ridoy-doctor-actions {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .ridoy-doctor-edit-modal {
+    max-height: 95vh;
+  }
+
+  .ridoy-doctor-modal-header,
+  .ridoy-doctor-edit-form {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+}

@@ -1,0 +1,122 @@
+/* ========================================
+   PAGINATION
+======================================== */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 40px 0 20px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   PAGINATION BUTTON
+======================================== */
+
+.pagination button {
+  min-width: 42px;
+  height: 42px;
+  padding: 0 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #334155;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* ========================================
+   HOVER
+======================================== */
+
+.pagination button:hover:not(:disabled) {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+}
+
+/* ========================================
+   ACTIVE PAGE
+======================================== */
+
+.pagination button.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}
+
+/* ========================================
+   ACTIVE HOVER
+======================================== */
+
+.pagination button.active:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+/* ========================================
+   DISABLED
+======================================== */
+
+.pagination button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: #f8fafc;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+  .pagination {
+    gap: 6px;
+    margin: 30px 0 15px;
+    padding: 8px;
+  }
+
+  .pagination button {
+    min-width: 38px;
+    height: 38px;
+    padding: 0 10px;
+
+    font-size: 13px;
+    border-radius: 7px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+  .pagination {
+    gap: 5px;
+  }
+
+  .pagination button {
+    min-width: 34px;
+    height: 34px;
+    padding: 0 8px;
+
+    font-size: 12px;
+  }
+}

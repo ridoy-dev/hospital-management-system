@@ -1,0 +1,890 @@
+/* =========================================================
+   MY APPOINTMENTS PAGE
+========================================================= */
+
+.patient-my-appointments-page {
+  min-height: 100vh;
+  background: #f5f8fc;
+  padding: 60px 20px 80px;
+  color: #1e293b;
+  margin-top: 80px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.patient-my-appointments-loading {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+  font-weight: 600;
+  color: #2563eb;
+  background: #f5f8fc;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.patient-my-appointments-header {
+  max-width: 1100px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.patient-my-appointments-badge {
+  display: inline-block;
+
+  padding: 7px 14px;
+  margin-bottom: 14px;
+
+  border-radius: 30px;
+  background: #e8f1ff;
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.patient-my-appointments-header h1 {
+  margin: 0;
+
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 800;
+  overflow: hidden;
+  color: #0f172a;
+}
+
+.patient-my-appointments-header p {
+  max-width: 600px;
+  margin: 14px auto 0;
+
+  font-size: 16px;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.patient-my-appointments-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.patient-my-appointments-empty {
+  padding: 70px 30px;
+
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+.patient-my-appointments-empty h2 {
+  margin: 0 0 10px;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.patient-my-appointments-empty p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   APPOINTMENT LIST
+========================================================= */
+
+.patient-my-appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+
+/* =========================================================
+   APPOINTMENT CARD
+========================================================= */
+
+.patient-my-appointment-card {
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  padding: 26px;
+
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.patient-my-appointment-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #cbd5e1;
+
+  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.09);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.patient-my-appointment-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid #edf2f7;
+}
+
+.patient-my-appointment-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  color: #94a3b8;
+}
+
+.patient-my-appointment-top h2 {
+  margin: 0;
+
+  font-size: 23px;
+  font-weight: 750;
+
+  color: #0f172a;
+}
+
+.patient-my-appointment-top p {
+  margin: 5px 0 0;
+
+  font-size: 14px;
+  color: #64748b;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.patient-my-appointment-status {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 13px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+
+/* Pending */
+
+.patient-my-appointment-status-pending {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+
+
+/* Approved */
+
+.patient-my-appointment-status-approved {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+
+/* Rejected */
+
+.patient-my-appointment-status-rejected {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.patient-my-appointment-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  padding: 23px 0;
+
+  border-bottom: 1px solid #edf2f7;
+}
+
+.patient-my-appointment-details > div {
+  min-width: 0;
+}
+
+.patient-my-appointment-details span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #94a3b8;
+}
+
+.patient-my-appointment-details strong {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #334155;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   REASON
+========================================================= */
+
+.patient-my-appointment-reason {
+  padding: 22px 0;
+}
+
+.patient-my-appointment-reason > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.patient-my-appointment-reason p {
+  margin: 0;
+
+  padding: 14px 16px;
+
+  background: #f8fafc;
+
+  border-left: 3px solid #2563eb;
+  border-radius: 7px;
+
+  color: #475569;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.patient-my-appointment-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 4px;
+}
+
+.patient-my-appointment-actions button {
+  min-width: 100px;
+
+  padding: 10px 17px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* Update */
+
+.patient-my-appointment-edit-btn {
+  background: #eff6ff;
+  color: #2563eb;
+
+  border: 1px solid #bfdbfe;
+}
+
+.patient-my-appointment-edit-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+
+  transform: translateY(-1px);
+}
+
+
+/* Delete */
+
+.patient-my-appointment-delete-btn {
+  background: #fff1f2;
+  color: #e11d48;
+
+  border: 1px solid #fecdd3;
+}
+
+.patient-my-appointment-delete-btn:hover {
+  background: #e11d48;
+  color: #ffffff;
+  border-color: #e11d48;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LOCKED MESSAGE
+========================================================= */
+
+.patient-my-appointment-locked {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  padding-top: 18px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.patient-my-appointment-locked span {
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.patient-my-appointment-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.58);
+
+  backdrop-filter: blur(5px);
+
+  overflow-y: auto;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.patient-my-appointment-modal {
+  width: 100%;
+  max-width: 520px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  padding: 27px;
+
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.25);
+
+  animation: appointmentModalIn 0.22s ease-out;
+}
+
+@keyframes appointmentModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.patient-my-appointment-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.patient-my-appointment-modal-header span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  color: #2563eb;
+}
+
+.patient-my-appointment-modal-header h2 {
+  margin: 0;
+
+  font-size: 23px;
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+.patient-my-appointment-modal-header > button {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  font-size: 24px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.patient-my-appointment-modal-header > button:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+
+/* =========================================================
+   EDIT FORM
+========================================================= */
+
+.patient-my-appointment-edit-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.patient-my-appointment-edit-form label {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #334155;
+}
+
+
+/* Inputs */
+
+.patient-my-appointment-edit-form input,
+.patient-my-appointment-edit-form textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.patient-my-appointment-edit-form input {
+  height: 45px;
+}
+
+.patient-my-appointment-edit-form textarea {
+  min-height: 120px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+.patient-my-appointment-edit-form input:focus,
+.patient-my-appointment-edit-form textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+========================================================= */
+
+.patient-my-appointment-save-btn {
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 13px 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.patient-my-appointment-save-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 7px 18px rgba(37, 99, 235, 0.22);
+}
+
+.patient-my-appointment-save-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .patient-my-appointments-page {
+    padding: 45px 16px 60px;
+  }
+
+  .patient-my-appointments-header {
+    margin-bottom: 32px;
+  }
+
+  .patient-my-appointments-header h1 {
+    font-size: 34px;
+  }
+
+  .patient-my-appointment-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .patient-my-appointments-page {
+    padding: 35px 12px 50px;
+  }
+
+
+  /* Header */
+
+  .patient-my-appointments-header {
+    margin-bottom: 28px;
+  }
+
+  .patient-my-appointments-badge {
+    font-size: 10px;
+    padding: 6px 11px;
+  }
+
+  .patient-my-appointments-header h1 {
+    font-size: 28px;
+  }
+
+  .patient-my-appointments-header p {
+    margin-top: 10px;
+
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+
+  /* Card */
+
+  .patient-my-appointment-card {
+    padding: 18px;
+
+    border-radius: 14px;
+  }
+
+
+  /* Card top */
+
+  .patient-my-appointment-top {
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding-bottom: 18px;
+  }
+
+  .patient-my-appointment-top h2 {
+    font-size: 19px;
+  }
+
+  .patient-my-appointment-top p {
+    font-size: 13px;
+  }
+
+  .patient-my-appointment-status {
+    align-self: flex-start;
+
+    padding: 6px 11px;
+
+    font-size: 11px;
+  }
+
+
+  /* Details */
+
+  .patient-my-appointment-details {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px 12px;
+
+    padding: 19px 0;
+  }
+
+  .patient-my-appointment-details span {
+    font-size: 11px;
+  }
+
+  .patient-my-appointment-details strong {
+    font-size: 13px;
+  }
+
+
+  /* Reason */
+
+  .patient-my-appointment-reason {
+    padding: 18px 0;
+  }
+
+  .patient-my-appointment-reason p {
+    padding: 12px;
+
+    font-size: 13px;
+  }
+
+
+  /* Actions */
+
+  .patient-my-appointment-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+  }
+
+  .patient-my-appointment-actions button {
+    width: 100%;
+    min-width: 0;
+
+    padding: 10px 8px;
+  }
+
+
+  /* Locked */
+
+  .patient-my-appointment-locked {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    line-height: 1.5;
+  }
+
+
+  /* Modal */
+
+  .patient-my-appointment-modal-overlay {
+    align-items: flex-start;
+
+    padding: 15px;
+
+    padding-top: 35px;
+  }
+
+  .patient-my-appointment-modal {
+    max-width: 100%;
+
+    padding: 20px;
+
+    border-radius: 14px;
+  }
+
+  .patient-my-appointment-modal-header {
+    margin-bottom: 20px;
+  }
+
+  .patient-my-appointment-modal-header h2 {
+    font-size: 20px;
+  }
+
+  .patient-my-appointment-edit-form {
+    gap: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .patient-my-appointments-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .patient-my-appointment-card {
+    padding: 15px;
+  }
+
+  .patient-my-appointments-header h1 {
+    font-size: 25px;
+  }
+
+  .patient-my-appointment-details {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-my-appointment-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-my-appointment-modal {
+    padding: 17px;
+  }
+
+}
